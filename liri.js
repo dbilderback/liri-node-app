@@ -154,5 +154,6 @@ app.get('/getMusic/:title', function(req, res) {
     getMusic(musicTitle[1], req, res);
     //console.log(title);
 });
-
-app.listen(80);
+app.listen(process.env.PORT || 3000, function() {
+    console.log("listening on 3000");
+});
