@@ -38,8 +38,8 @@ function getTweets(req, res)  {
             res.send(tweets);
             res.end();
             //for (i=0;i<tweets.length;i++) {
-                //console.log(tweets[i].text);
-                //logInfo(tweets[i].text+'\n');
+            //console.log(tweets[i].text);
+            //logInfo(tweets[i].text+'\n');
             //}
         } else {
             console.log(error);
@@ -53,6 +53,25 @@ function getMusic(title, req, res) {
     clientSpotify.search({ type: 'track', query: title }, function(err, data) {
         res.send(data);
         res.end();
+
+        /*
+        for(var i = 0; i < data.tracks.items.length; i++) {
+            var songData = data.tracks.items[i];
+            //artist
+            console.log('Artist: ' + songData.artists[0].name);
+            logInfo('Artist: ' + songData.artists[0].name+'\n');
+            //song name
+            console.log('Song: ' + songData.name);
+            logInfo('Song: ' + songData.name+'\n');
+            //spotify preview link
+            console.log('Preview URL: ' + songData.preview_url);
+            logInfo('Preview URL: ' + songData.preview_url+'\n');
+            //album name
+            console.log('Album: ' + songData.album.name);
+            console.log('-----------------------');
+            logInfo('Album: ' + songData.album.name+'\n');
+        }
+        */
     });
 }
 
@@ -85,7 +104,7 @@ function runApp(task, input) {
             executeFile();
             break;
         default:
-        console.log("there appears to be an error");
+            console.log("there appears to be an error");
     }
 }
 
