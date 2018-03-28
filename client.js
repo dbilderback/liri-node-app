@@ -5,7 +5,7 @@ $('#getMovies-button').click(function(response) {
     $.ajax({
         type: 'GET',
         //url: proxyurl+'http://localhost:1337/getMovies'
-        url: 'http://localhost:1337/getMovies/title:'+movieTitle
+        url: 'https://salty-chamber-87144.herokuapp.com/getMovies/title:'+movieTitle
     }).done(function (data) {
         displayMovie(data);
     }).fail(function (jqXHR, textStatus) {
@@ -17,7 +17,7 @@ $('#getTweets-button').click(function(response) {
     $.ajax({
         type: 'GET',
         //url: proxyurl+'http://localhost:1337/getMovies'
-        url: 'http://localhost:1337/getTweets/'
+        url: 'https://salty-chamber-87144.herokuapp.com/getTweets/'
     }).done(function (data) {
         displayTweets(data);
     }).fail(function (jqXHR, textStatus) {
@@ -30,7 +30,7 @@ $('#getMusic-button').click(function(response) {
     $.ajax({
         type: 'GET',
         //url: proxyurl+'http://localhost:1337/getMovies'
-        url: 'http://localhost:1337/getMusic/title:'+musicTitle
+        url: 'https://salty-chamber-87144.herokuapp.com/getMusic/title:'+musicTitle
     }).done(function (data) {
         displayMusic(data);
     }).fail(function (jqXHR, textStatus) {
